@@ -1,8 +1,10 @@
 package sw.sample.designpattern
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import sw.sample.designpattern.databinding.ActivityMainBinding
+import sw.sample.designpattern.mvc.MvcActivity
 
 class MainActivity : AppCompatActivity() {
 
@@ -19,7 +21,9 @@ class MainActivity : AppCompatActivity() {
 
     }//override fun onCreate(savedInstanceState: Bundle?)
 
-    fun openMvc(){}
+    fun openMvc(){
+        startActivity(Intent(this, MvcActivity::class.java))
+    }
     fun openMvp(){}
     fun openMvvm(){}
     fun openMvi(){}
