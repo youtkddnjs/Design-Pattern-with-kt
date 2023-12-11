@@ -1,5 +1,6 @@
 package sw.sample.designpattern.mvc.provider
 
+import android.util.Log
 import retrofit2.Call
 import retrofit2.Response
 import sw.sample.designpattern.ImageResponse
@@ -14,6 +15,7 @@ class ImageProvider(private val callback: Callback) {
                     call: Call<ImageResponse>,
                     response: Response<ImageResponse>
                 ) {
+                    Log.d("onResponse", "${response.body()}")
                     if (response.isSuccessful){
                         response.body()?.let{
                             callback.loadImage(it.urls.regular, it.color)
@@ -22,6 +24,7 @@ class ImageProvider(private val callback: Callback) {
                 }
 
                 override fun onFailure(call: Call<ImageResponse>, t: Throwable) {
+                    t.printStackTrace()
                 }
 
             })

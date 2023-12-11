@@ -2,6 +2,7 @@ package sw.sample.designpattern.mvc
 
 import android.graphics.Color
 import android.os.Bundle
+import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import coil.load
 import sw.sample.designpattern.databinding.ActivityMvcBinding
@@ -22,6 +23,7 @@ class MvcActivity: AppCompatActivity(), ImageProvider.Callback {//class MvcActiv
     }//override fun onCreate(savedInstanceState: Bundle?)
 
     fun loadImage(){
+        Log.d("swLog", "mvcActivity loadImage")
         imageprovider.getRandomImage()
     }
 
@@ -32,7 +34,7 @@ class MvcActivity: AppCompatActivity(), ImageProvider.Callback {//class MvcActiv
                 setBackgroundColor(Color.parseColor(color))
                 load(url)
             }
-            imagecountTV.text="불러온 이미지 수 : ${model.count}"
+            imagecountTV.text="불러온 이미지 : ${model.count}"
         }
     }
 }
