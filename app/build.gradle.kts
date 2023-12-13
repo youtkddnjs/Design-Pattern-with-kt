@@ -1,6 +1,7 @@
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
+    id("kotlin-kapt")
 }
 
 android {
@@ -53,4 +54,16 @@ dependencies {
     implementation("com.squareup.retrofit2:retrofit:2.9.0")
     implementation("com.squareup.retrofit2:converter-gson:2.9.0")
     implementation("io.coil-kt:coil:2.5.0")
+
+    implementation("androidx.activity:activity-ktx:1.8.1")
+    implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.6.2")
+
+    implementation("com.squareup.retrofit2:adapter-rxjava2:2.9.0")
+    implementation("io.reactivex.rxjava3:rxandroid:3.0.2")
+    implementation("io.reactivex.rxjava3:rxjava:3.1.8")
+    implementation("io.reactivex.rxjava3:rxkotlin:3.0.1")
+
+
+
+
 }
