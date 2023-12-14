@@ -28,6 +28,7 @@
             android:exported="false"/>
         <activity android:name="sw.sample.designpattern.mvp.MvpActivity" />
         <activity android:name="sw.sample.designpattern.mvvm.MvvmActivity" />
+        <activity android:name="sw.sample.designpattern.mvi.MviActivity" />
     </application>
 
 </manifest>
