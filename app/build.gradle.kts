@@ -63,7 +63,7 @@ dependencies {
     implementation("io.reactivex.rxjava2:rxandroid:2.1.1")
     implementation("io.reactivex.rxjava3:rxkotlin:3.0.1")
 
-
-
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.8.0-RC")
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.8.0-RC")
 
 }
